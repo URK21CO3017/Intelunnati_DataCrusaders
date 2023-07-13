@@ -2,6 +2,12 @@
 
 This project focuses on developing a fake news detection system using Python and machine learning techniques. The goal is to create an accurate and efficient model that can classify news articles as fake or real, helping users identify and combat misinformation.
 
+**Team Members:**
+
+Sri Kavi Selvan 
+Karen Joseph
+Sunil Moses
+
 **Overview:**
 
 The fake news detection system follows a step-by-step approach, including data preprocessing and cleaning, model training, evaluation, and prediction.
