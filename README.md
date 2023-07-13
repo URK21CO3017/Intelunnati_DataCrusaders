@@ -10,12 +10,14 @@ Convert the text to lowercase and remove stop words (common words that do not ca
 Apply tokenization to split the text into individual words or tokens.
 Perform stemming or lemmatization to reduce words to their base or root form.
 Remove any irrelevant or noisy data that could hinder model performance.
+
 Feature Extraction:
 
 Utilize techniques like bag-of-words, TF-IDF, or word embeddings to represent the text data numerically.
 Generate a feature matrix where each row represents a news article and each column represents a feature.
 Consider n-grams (sequences of n words) to capture contextual information.
 Explore advanced techniques such as BERT or other pre-trained language models for feature extraction.
+
 Model Training:
 
 Split the preprocessed dataset into training and testing sets.
@@ -23,6 +25,7 @@ Select a suitable machine learning algorithm such as logistic regression, decisi
 Train the chosen model on the training set, using the feature matrix and corresponding labels.
 Fine-tune hyperparameters to optimize model performance, using techniques like grid search or random search.
 Evaluate the model's performance using appropriate evaluation metrics.
+
 Evaluation and Prediction:
 
 Assess the trained model's performance on the testing set, using metrics such as accuracy, precision, recall, and F1-score.
