@@ -4,9 +4,11 @@ This project focuses on developing a fake news detection system using Python and
 
 **Team Members:**
 
-Sri Kavi Selvan 
-Karen Joseph
-Sunil Moses
+Name: Sri Kavi Selvan S (URK21CO3017)
+
+Name: Karen Joseph (URK21CO3009)
+
+Name: Sunil Moses (URK21CO3026)
 
 **Overview:**
 
