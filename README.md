@@ -2,9 +2,11 @@ Fake News Detection using Python and Machine Learning
 This project focuses on developing a simple and effective fake news detection system using Python and machine learning techniques.
 
 Overview
+
 The fake news detection system follows a step-by-step approach, including data preprocessing, model training, evaluation, and prediction.
 
 Data Preprocessing
+
 Gather a labeled dataset of fake and real news articles.
 Clean the data by removing HTML tags, punctuation, and special characters.
 Convert the text to lowercase and remove stop words.
@@ -21,7 +23,9 @@ Evaluate the model's performance using metrics like accuracy, precision, recall,
 Analyze the confusion matrix to assess classification accuracy.
 Use the trained model to predict the authenticity of new news articles.
 Provide users with the ability to input news articles for classification.
+
 Usage
+
 Clone the repository: git clone [https://github.com/yourusername/fake-news-detection.git](https://github.com/URK21CO3009KARENJOSEPH/Intelunnati_DataCrusaders)
 Install the required dependencies: pip install -r requirements.txt
 Run the main script: python fake_news_detection.py
