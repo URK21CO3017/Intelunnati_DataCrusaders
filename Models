@@ -1,5 +1,7 @@
 Logistic Regression:
 
+Logistic regression provides a probabilistic approach, estimating the likelihood of a news article being fake or real based on the relationships between input features. It allows for interpretability and insight into the importance of different features in determining the likelihood of a news article being fake or real.
+
 start = timer()
 model = LogisticRegression()
 model.fit(X_train, Y_train)
