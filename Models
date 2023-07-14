@@ -1,4 +1,4 @@
-**Logistic Regression:**
+Logistic Regression:
 
 start = timer()
 model = LogisticRegression()
@@ -20,7 +20,7 @@ Accuracy score of the test data :  0.9888641425389755
 from sklearn.metrics import classification_report
 print(classification_report(Y_test, X_test_prediction))
 
-**Decision Tree:**
+Decision Tree:
 
 from sklearn.tree import DecisionTreeClassifier patch_sklearn() start = timer() DT = DecisionTreeClassifier() DT.fit(X_train, Y_train) train_patched = timer() - start f"Intel® extension for Scikit-learn time: {train_patched:.2f} s"
 
@@ -47,7 +47,7 @@ print(classification_report(Y_test, pred_dt))
    macro avg       1.00      1.00      1.00      8980
 weighted avg       1.00      1.00      1.00      8980
 
-**Random Forest:**
+Random Forest:
 
 from sklearn.ensemble import RandomForestClassifier
 patch_sklearn()
