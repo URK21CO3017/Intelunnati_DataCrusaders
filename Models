@@ -5,24 +5,20 @@ model = LogisticRegression()
 model.fit(X_train, Y_train)
 train_patched = timer() - start
 f"Intel® extension for Scikit-learn time: {train_patched:.2f} s"
+
 from sklearnex import unpatch_sklearn
 unpatch_sklearn()
-start = timer()
-model = LogisticRegression()
-model.fit(X_train, Y_train)
-train_patched = timer() - start
-f"Intel® extension for Scikit-learn time: {train_patched:.2f} s"
-'Intel® extension for Scikit-learn time: 3.03 s'
+
 X_test_prediction = model.predict(X_test)
 test_data_accuracy = accuracy_score(X_test_prediction, Y_test)
 print('Accuracy score of the test data : ', test_data_accuracy)
-Accuracy score of the test data :  0.9888641425389755
+
 from sklearn.metrics import classification_report
 print(classification_report(Y_test, X_test_prediction))
 
-Decision Tree:
+----------------------------------------------------------------------------
 
-from sklearn.tree import DecisionTreeClassifier patch_sklearn() start = timer() DT = DecisionTreeClassifier() DT.fit(X_train, Y_train) train_patched = timer() - start f"Intel® extension for Scikit-learn time: {train_patched:.2f} s"
+Decision Tree:
 
 from sklearn.tree import DecisionTreeClassifier
 from timeit import default_timer as timer
@@ -33,19 +29,13 @@ DT = DecisionTreeClassifier()
 DT.fit(X_train, Y_train)
 train_time = timer() - start
 f"Scikit-learn time: {train_time:.2f} s"
-'Scikit-learn time: 25.12 s'
+
 pred_dt = DT.predict(X_test)
 DT.score(X_test, Y_test)
-0.9956570155902005
+
 print(classification_report(Y_test, pred_dt))
-              precision    recall  f1-score   support
 
-           0       1.00      1.00      1.00      4696
-           1       1.00      1.00      1.00      4284
-
-    accuracy                           1.00      8980
-   macro avg       1.00      1.00      1.00      8980
-weighted avg       1.00      1.00      1.00      8980
+--------------------------------------------------------------------
 
 Random Forest:
 
@@ -56,31 +46,19 @@ rf = RandomForestClassifier(random_state=0)
 rf.fit(X_train, Y_train)
 train_patched = timer() - start
 f"Intel® extension for Scikit-learn time: {train_patched:.2f} s"
-Intel(R) Extension for Scikit-learn* enabled (https://github.com/intel/scikit-learn-intelex)
-'Intel® extension for Scikit-learn time: 68.46 s'
+
 unpatch_sklearn()
 start = timer()
 rf = RandomForestClassifier(random_state=0)
 rf.fit(X_train, Y_train)
 train_patched = timer() - start
 f"Scikit-learn time: {train_patched:.2f} s"
-'Scikit-learn time: 68.45 s'
+
 rf.predict(X_test)
-array([1, 1, 0, ..., 0, 0, 0])
 rf.score(X_test, Y_test)
-0.9924276169265034
+
 from sklearn.metrics import classification_report
-​
-# Generate predictions using the trained Random Forest model
 pred_rf = rf.predict(X_test)
-​
-# Print the classification report
 print(classification_report(Y_test, pred_rf))
-              precision    recall  f1-score   support
 
-           0       0.99      0.99      0.99      4696
-           1       0.99      0.99      0.99      4284
-
-    accuracy                           0.99      8980
-   macro avg       0.99      0.99      0.99      8980
-weighted avg       0.99      0.99      0.99      8980
+------------------------------------------------------------------
